@@ -23,3 +23,4 @@
 - sudo docker
 # How to run docker command without sudo
 - sudo usermod -aG docker ${USER}
+- you can run docker command without sudo after logout / login
