@@ -69,7 +69,6 @@ CMD echo 'Hello, Docker!'
 - sudo push ${PRIVATE_REGISTRY_HOST:PORT}/hello_docker
 # How to list all images in private registry
 - curl "http://10.0.2.5:5000/v2/_catalog"
-
-
-
+# How to run image in private registry
+- sudo docker run -d --name sbadmin2 -p 8080:8080 10.0.2.5:5000/sbadmin2
 
