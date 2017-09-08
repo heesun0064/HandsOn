@@ -37,8 +37,16 @@
 # How to join worker
 - sudo docker swarm join --token SWMTKN-1-3i75ons5uty7j6w7mdm53aio3yufghgryvkpmj64jbfih2e02f-c1r3pttntgnhu35ngwk2eqoin 10.0.2.5:2377
     - token is provided when we execute swarm init command in manager
+# How to create service
+- sudo docker service create -p 8080:8080 --name tomcat tomcat
+    - one service will be created
+# How to scale service
+- sudo docker service scale ${SERVICE_NAME}=3
+    - It will create instance up to 3
 # How to create service on all node
 - sudo docker service create --mode global -p 8080:8080 --name tomcat tomcat
+# How to list services
+- sudo docker service ls
 # How to list service containers running on nodes
 - sudo docker service ps ${SERVICE_NAME}
 # How to remove service
