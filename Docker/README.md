@@ -67,6 +67,8 @@ CMD echo 'Hello, Docker!'
     - { "insecure-registries":["10.0.2.5:5000"] }
 - restart docker (sudo service docker restart)
 - sudo push ${PRIVATE_REGISTRY_HOST:PORT}/hello_docker
+# How to list all images in private registry
+- curl "http://10.0.2.5:5000/v2/_catalog"
 
 
 
