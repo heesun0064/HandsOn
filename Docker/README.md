@@ -61,12 +61,12 @@ FROM ubuntu:16.04
 MAINTAINER Heesu Kim <heesun0064@gmail.com>
 CMD echo 'Hello, Docker!'
 # How to build docker image and upload on private registry
-- sudo docker build -t temp/hello_docker .
-- sudo docker tag temp/hello_docker ${PRIVATE_REGISTRY_HOST}/hello_docker
+- sudo docker build -t hello_docker .
+- sudo docker tag hello_docker ${PRIVATE_REGISTRY_HOST:PORT}/hello_docker
 - create or edit /etc/docker/daemon.json with following
     - { "insecure-registries":["10.0.2.5:5000"] }
 - restart docker (sudo service docker restart)
-- sudo push image ${PRIVATE_REGISTRY_HOST}/hello_docker
+- sudo push ${PRIVATE_REGISTRY_HOST:PORT}/hello_docker
 
 
 
