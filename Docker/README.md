@@ -28,6 +28,7 @@
 # What is Swarm (docker cluster)
 - Swarm is the cluster of docker and it consists of few managers and many workers.
 - Swarm is included in docker already
+- There are three major command... docker swarm / docker node / docker service
 # How to create swarm manager
 - sudo docker swarm init --advertise-addr HOST:PORT
     - HOST --> IP address of this host
@@ -38,5 +39,7 @@
     - token is provided when we execute swarm init command in manager
 # How to create service on all node
 - sudo docker service create --mode global -p 8080:8080 --name tomcat tomcat
+# How to list service containers running on nodes
+- sudo docker service ps ${SERVICE_NAME}
 # How to remove service
-- sudo docker service remove tomcat
+- sudo docker service remove ${SERVICE_NAME}
