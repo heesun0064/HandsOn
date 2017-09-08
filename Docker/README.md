@@ -24,3 +24,19 @@
 # How to run docker command without sudo
 - sudo usermod -aG docker ${USER}
 - you can run docker command without sudo after logout / login
+
+# What is Swarm (docker cluster)
+- Swarm is the cluster of docker and it consists of few managers and many workers.
+- Swarm is included in docker already
+# How to create swarm manager
+- sudo docker swarm init --advertise-addr HOST:PORT
+    - HOST --> IP address of this host
+    - PORT --> Defatul 2377
+- it will show the token for worker and how to join worker
+# How to join worker
+- sudo docker swarm join --token SWMTKN-1-3i75ons5uty7j6w7mdm53aio3yufghgryvkpmj64jbfih2e02f-c1r3pttntgnhu35ngwk2eqoin 10.0.2.5:2377
+    - token is provided when we execute swarm init command in manager
+# How to create service on all node
+- sudo docker service create --mode global -p 8080:8080 --name tomcat tomcat
+# How to remove service
+- sudo docker service remove tomcat
