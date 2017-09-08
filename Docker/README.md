@@ -51,3 +51,23 @@
 - sudo docker service ps ${SERVICE_NAME}
 # How to remove service
 - sudo docker service remove ${SERVICE_NAME}
+
+# How to install private registry
+- sudo docker pull registry
+# How to run private registry
+- sudo docker run -d --name personal-registry -p 5000:5000 registry
+# Sample of Dockerfile
+FROM ubuntu:16.04
+MAINTAINER Heesu Kim <heesun0064@gmail.com>
+CMD echo 'Hello, Docker!'
+# How to build docker image and upload on private registry
+- sudo docker build -t temp/hello_docker .
+- sudo docker tag temp/hello_docker ${PRIVATE_REGISTRY_HOST}/hello_docker
+- create or edit /etc/docker/daemon.json with following
+    - { "insecure-registries":["10.0.2.5:5000"] }
+- restart docker (sudo service docker restart)
+- sudo push image ${PRIVATE_REGISTRY_HOST}/hello_docker
+
+
+
+
