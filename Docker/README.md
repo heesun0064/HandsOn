@@ -22,7 +22,7 @@
 # How to list all commands available in docker
 - sudo docker
 # How to run docker command without sudo
-- sudo usermod -aG docker ${USER}
+     sudo usermod -aG docker ${USER}
 - you can run docker command without sudo after logout / login
 
 # What is Swarm (docker cluster)
