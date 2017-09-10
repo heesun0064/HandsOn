@@ -1,6 +1,9 @@
-# How to install docker on ubuntu
-- sudo apt-get update
-- sudo apt-get install docker.io
+### How to install docker on ubuntu
+We can install docker using apt-get as following.
+```
+sudo apt-get update
+sudo apt-get install docker.io
+```
 # How to install tomcat
 - sudo docker search tomcat
 - sudo docker pull tomcat
