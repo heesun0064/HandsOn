@@ -17,31 +17,41 @@ sudo docker images
 ```
 sudo docker run -d -p 8080:8080 -name tomcat tomcat
 ```
-    - -d --> run as daemon mode
-    - -p 8080:8080 --> map host port and container port
-    - -name tomcat --> name of this container
-    - tomcat --> image name
-# How to connect tomcat using shell
-- sudo docker exec -it -name tomcat bash
-    - -it --> use in/out terminal
-    - -name tomcat --> specify container name
-    - bash --> command to execute ( or /bin/bash)
-# How to list all containers running in docker
-- sudo docker ps
-# How to list all commands available in docker
-- sudo docker
-# How to run docker command without sudo
-     sudo usermod -aG docker ${USER}
+- -d --> run as daemon mode
+- -p 8080:8080 --> map host port and container port
+- -name tomcat --> name of this container
+- tomcat --> image name
+### How to connect tomcat using shell
+```
+sudo docker exec -it -name tomcat bash
+```
+- -it --> use in/out terminal
+- -name tomcat --> specify container name
+- bash --> command to execute ( or /bin/bash)
+### How to list all containers running in docker
+```
+sudo docker ps
+```
+### How to list all commands available in docker
+```
+sudo docker
+```
+### How to run docker command without sudo
+```
+sudo usermod -aG docker ${USER}
+```
 - you can run docker command without sudo after logout / login
 
-# What is Swarm (docker cluster)
+### What is Swarm (docker cluster)
 - Swarm is the cluster of docker and it consists of few managers and many workers.
 - Swarm is included in docker already
 - There are three major command... docker swarm / docker node / docker service
-# How to create swarm manager
-- sudo docker swarm init --advertise-addr HOST:PORT
-    - HOST --> IP address of this host
-    - PORT --> Defatul 2377
+### How to create swarm manager
+```
+sudo docker swarm init --advertise-addr HOST:PORT
+```
+- HOST --> IP address of this host
+- PORT --> Defatul 2377
 - it will show the token for worker and how to join worker
 # How to join worker
 - sudo docker swarm join --token SWMTKN-1-3i75ons5uty7j6w7mdm53aio3yufghgryvkpmj64jbfih2e02f-c1r3pttntgnhu35ngwk2eqoin 10.0.2.5:2377
