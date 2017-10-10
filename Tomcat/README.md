@@ -3,6 +3,6 @@
 
 ![Tomcat Downloads](./tomcat_downloads.png)
 
-다운로드할 버전(8.5)를 선택하면 아래와 같이 패키지 타입이 여러개 보이는데
+다운로드할 버전(8.5)를 선택하면 아래와 같이 패키지 타입이 여러개 보이는데 맨 아래에 있는 32-bit/64-bit Windows Service Installer를 선택하여 설치 파일을 다운로드 한다.
 
 ![톰캣 패키지 종류](./tomcat_package_type.png)
