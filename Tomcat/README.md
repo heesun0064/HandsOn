@@ -53,9 +53,11 @@ JRE 설치된 위치 확인하고 [Next >] 버튼 클릭
 
 multiplart-config에 있는 max-file-size와 max-request-size의 50MB 제한을 늘려주고, Tomcat 서비스를 재시작 해야 한다.
 
+```
 <multipart-config>
   <!-- 50MB max -->
   <max-file-size>52428800</max-file-size>
   <max-request-size>52428800</max-request-size>
   <file-size-threshold>0</file-size-threshold>
 </multipart-config>
+```
