@@ -65,3 +65,7 @@ multiplart-config에 있는 max-file-size와 max-request-size의 50MB 제한을 
   <file-size-threshold>0</file-size-threshold>
 </multipart-config>
 ```
+
+톰캣 서비스 설치시 기본적으로 시작 유형이 [수동]으로 설치된다. 이를 자동으로 바꾸기 위해 services.msc를 열고 Apache Tomcat Service를 찾아 아래와 같이 시작 유형을 [자동]으로 바꾸어 준다.
+
+![톰캣 서비스 설정](./tomcat_service_config.png)
