@@ -43,7 +43,12 @@ JRE 설치된 위치 확인하고 [Next >] 버튼 클릭
 
 ![톰캣 설치](./tomcat_installation_step_8.png)
 
+[Finish] 버튼을 클릭
+설치가 되어 톰캣이 정상적으로 실행되었는지 확인하기 위해 아래와 같이 접속해 본다.
+
 ![톰캣 설치](./tomcat_verify_step_1.png)
+
+만약 메니저를 함께 설치했다면 우측 Manager App 버튼을 클릭하고 설치시 입력한 Username, Password를 입력하고 아래와 같이 메니저가 정상적으로 실행되는지 확인한다.
 
 ![톰캣 설치](./tomcat_verify_step_2.png)
 
