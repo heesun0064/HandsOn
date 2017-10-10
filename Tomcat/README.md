@@ -69,3 +69,23 @@ multiplart-config에 있는 max-file-size와 max-request-size의 50MB 제한을 
 톰캣 서비스 설치시 기본적으로 시작 유형이 [수동]으로 설치된다. 이를 자동으로 바꾸기 위해 services.msc를 열고 Apache Tomcat Service를 찾아 아래와 같이 시작 유형을 [자동]으로 바꾸어 준다.
 
 ![톰캣 서비스 설정](./tomcat_service_config.png)
+
+
+톰캣의 호스트 관리자와 어플리케이션 관리자는 기본적으로 톰캣이 설치된 서버의 브라우저에서만 접근이 가능하다. 이를 바꾸기 위해서는 context.xml을 열고 아래와 같이 valve 부분을 <!-- -->와 같이 주석으로 막아주면 된다.
+
+<Context antiResourceLocking="false" privileged="true" >
+<!--
+  <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+-->
+  <Manager sessionAttributeValueClassNameFilter="java\.lang\.(?:Boolean|Integer|Long|Number|String)|org\.apache\.catalina\.filters\.CsrfPreventionFilter\$LruCache(?:\$1)?|java\.util\.(?:Linked)?HashMap"/>
+</Context>
+
+호스트 관리자 설정 파일은 아래 위치에 있고,
+$(톰캣 설치 위치)\webapps\host-manager\META-INF\context.xml
+
+어플리케이션 관리자 설정 파일은 아래 위치에 있다.
+$(톰캣 설치 위치)\webapps\manager\META-INF\context.xml
+
+바뀐 설정은 톰캣 재시작 없이도 자동으로 반영된다.
+
