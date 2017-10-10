@@ -20,7 +20,7 @@
 ![톰캣 설치](./tomcat_installation_step_3.png)
 
 설치할 컴포넌트 선택 후 [Next >] 버튼 클릭
-(일반적으로 Manager만 설치해면 되나 필요에 따라 Host Manager를 설치한다)
+> 일반적으로 Manager만 설치해면 되나 필요에 따라 Host Manager를 설치한다
 
 ![톰캣 설치](./tomcat_installation_step_4.png)
 
