@@ -36,13 +36,13 @@ If you check "Launch DBeaver" in above step, you will see the flash screen.
 
 ![DBeaver Install](./dbeaver_install_step_9.png)
 
-Download Microsoft JDBC driver from [Microsoft](https://docs.microsoft.com/ko-kr/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server)
+Download and extract Microsoft JDBC driver from [Microsoft](https://docs.microsoft.com/ko-kr/sql/connect/jdbc/microsoft-jdbc-driver-for-sql-server). Need to make sure there is no space in the path of drivers.
 
 Click menu > Driver Manager > MS SQL Server > Microsoft Driver and click [Edit...] button
 
 ![DBeaver Install](./dbeaver_install_step_10.png)
 
-Select mssql-jdbc-x.x.x.jrex.jar which is extracted from Microsoft JDBC driver and click OK
+Select mssql-jdbc-x.x.x.jrex.jar which is extracted from Microsoft JDBC driver and click OK. Need to make sure there is no space in the path of drivers.
 
 ![DBeaver Install](./dbeaver_install_step_11.png)
 
