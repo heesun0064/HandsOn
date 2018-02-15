@@ -15,11 +15,11 @@ sudo docker images
 ```
 ### How to run tomcat
 ```
-sudo docker run -d -p 8080:8080 -name tomcat tomcat
+sudo docker run -d -p 8080:8080 --name tomcat tomcat
 ```
 - -d --> run as daemon mode
 - -p 8080:8080 --> map host port and container port
-- -name tomcat --> name of this container
+- --name tomcat --> name of this container
 - tomcat --> image name
 ### How to connect tomcat using shell
 ```
@@ -35,6 +35,14 @@ sudo docker ps
 ### How to list all commands available in docker
 ```
 sudo docker
+```
+### How to stop container running in docker
+```
+sudo docker stop tomcat
+```
+### How to remov container in docker
+```
+sudo docker rm tomcat
 ```
 ### How to run docker command without sudo
 ```
