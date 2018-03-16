@@ -49,6 +49,20 @@ sudo docker rm tomcat
 sudo usermod -aG docker ${USER}
 ```
 - you can run docker command without sudo after logout / login
+### Example for pulling, running gitlab in one command
+```
+sudo docker run --detach \
+    --hostname gitlab.example.com \
+    --publish 443:443 --publish 80:80 --publish 22:22 \
+    --name gitlab \
+    --restart always \
+    --volume /srv/gitlab/config:/etc/gitlab \
+    --volume /srv/gitlab/logs:/var/log/gitlab \
+    --volume /srv/gitlab/data:/var/opt/gitlab \
+    gitlab/gitlab-ce:latest
+```
+- restart always: restart this container after system rebooting
+- volume: map the system volume and container volume
 
 ### What is Swarm (docker cluster)
 - Swarm is the cluster of docker and it consists of few managers and many workers.
