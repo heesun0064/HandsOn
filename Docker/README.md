@@ -11,7 +11,8 @@ sudo docker pull tomcat
 ```
 ### How to list up all images
 ```
-sudo docker images
+sudo docker image ls
+sudo docker image rm image-name --> delete image
 ```
 ### How to run tomcat
 ```
@@ -36,7 +37,8 @@ sudo container ls -a
 ```
 ### How to delete all containers stopped in docker
 ```
-sudo docker system prune
+sudo docker container prune
+sudo docker system prune --> remove all unused docker resources such as containers, networks, volumes...
 ```
 ### How to delete containers in docker
 ```
